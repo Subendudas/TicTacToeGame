@@ -1,21 +1,18 @@
 package com.TicTacToe;
 
-import java.util.Scanner;
-
 public class TicTacToeGame 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		
-		Scanner UserInput = new Scanner(System.in);
-		char UserLetter = chooseUserLetter(UserInput);
-		char computerLetter = (UserLetter == 'X')? 'O':'X';
+		showBoard(board);
 	}
-		
-		private static char chooseUserLetter(Scanner UserInput) 
+	
+		private static void showBoard(char[] board) 
 		{
-			System.out.println("Choose X or O");
-			return UserInput.next().toUpperCase().charAt(0);
-		}
-
+			System.out.println("\n " + board[1] + " | " + board[2] + " | " + board[3]);
+			System.out.println("------------");
+			System.out.println(" " + board[4] + " | " + board[5] + " | " + board[6]);
+			System.out.println("------------");
+			System.out.println(" " + board[7] + " | " + board[8] + " | " + board[9]);
+	    }
 }
